@@ -25,11 +25,3 @@ int main(void)
 
 	return (0);
 }
- {
- putchar(',');
- putchar(' ');
- }
- }
- putchar('\n');
- return i(0);
- }
