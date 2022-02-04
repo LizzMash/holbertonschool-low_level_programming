@@ -1,22 +1,26 @@
- #include <stdio.h>
- /*
- * main - entry point
- *
- * Return:always return 0
- *
- */
- int main(void)
- {
- char a;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
- for (a = 'a'; a <= 'z' ; a++)
- {
- if (a == 'q' || a == 'e')
- {
- continue;
- }
- putchar(a);
- }
- putchar('\n');
- return (0);
- }
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	char low, e, q;
+
+	e = 'e';
+	q = 'q';
+
+	for (low = 'a'; low <= 'z'; low++)
+	{
+		if (low != e && low != q)
+			putchar(low);
+	}
+	putchar('\n');
+
+	return (0);
+}
