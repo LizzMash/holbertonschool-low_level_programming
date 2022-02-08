@@ -2,7 +2,7 @@
 /*
 *This is a program that prints out putchar
 */
-int putchar(char c)
+int _putchar(char c)
 {
 return (write,(1,&c,1));
 }
