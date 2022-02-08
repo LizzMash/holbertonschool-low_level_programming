@@ -1,8 +1,19 @@
 #include "main.h"
-/*
-*This is a program that prints out putchar
-*/
-int _putchar(char c)
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-return (write,(1,&c,1));
+	char *sh = "Holberton";
+
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+
+	return (0);
 }
