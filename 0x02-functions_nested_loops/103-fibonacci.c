@@ -1,31 +1,25 @@
 #include <stdio.h>
 /**
-* main - main function
+* main - Print sum of even fibonacci numbers
 *
 * Return: nothing
 */
 int main(void)
 {
-int counter = 2;
-
-float a = 1;
-float b = a + 1;
-float c = a + b;
-
-printf("%ld%.0f, ", a);
-printf("%ld%.0f, ", b);
-while (counter < 98)
+int counter = 0;
+long int a = 1;
+long int b = a;
+long int c = a + b;
+while (c < 4000000)
 {
-counter++;
-printf("%ld%.0f", c);
+if (c % 2 == 0)
+{
+counter += c;
+}
 a = b;
 b = c;
 c = a + b;
-if (counter < 98)
-{
-printf(", ");
 }
-}
-printf("\n");
+printf("%d\n", counter);
 return (0);
 }
