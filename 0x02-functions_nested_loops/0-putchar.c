@@ -1,10 +1,10 @@
-#include <stdio>
+#include "Holberton.h"
 /*
 *This is a program that prints out putchar
 */
-int main(void)
+char func[7]="_putchar";
 {
-printf("_putchar");
+printf(func);
 putchar('\n');
 return (0);
 }
