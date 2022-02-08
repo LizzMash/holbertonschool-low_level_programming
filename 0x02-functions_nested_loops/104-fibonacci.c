@@ -10,7 +10,6 @@ int main(void)
 	long int n2 = 1;
 	int i, c;
 	long int  sum, sum1, sum2, var11, var12, var21, var22;
-​
 	for (i = 0; i < 98; i++)
 	{
 		if (i == 0)
