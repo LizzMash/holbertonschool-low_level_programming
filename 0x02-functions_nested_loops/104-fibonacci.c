@@ -1,43 +1,49 @@
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
+ * main - main function
  *
- * Return: Always 0.
+ * Return: nothing
  */
 int main(void)
 {
-	long int n1 = 1;
-	long int n2 = 1;
-	int i, c;
-	long int  sum, sum1, sum2, var11, var12, var21, var22;
-	for (i = 0; i < 98; i++)
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
+	unsigned long half1, half2;
+
+	for (count = 0; count < 92; count++)
 	{
-		if (i == 0)
-		{ printf("%.0ld, ", n1); }
-		else if (i < 91)
-		{ sum = n1 + n2;
-			n1 = n2;
-			n2 = sum;
-			printf("%ld, ", sum); }
-		else
+		sum = fib1 + fib2;
+		printf("%lu, ", sum);
+
+		fib1 = fib2;
+		fib2 = sum;
+	}
+
+	fib1_half1 = fib1 / 10000000000;
+	fib2_half1 = fib2 / 10000000000;
+	fib1_half2 = fib1 % 10000000000;
+	fib2_half2 = fib2 % 10000000000;
+
+	for (count = 93; count < 99; count++)
+	{
+		half1 = fib1_half1 + fib2_half1;
+		half2 = fib1_half2 + fib2_half2;
+		if (fib1_half2 + fib2_half2 > 9999999999)
 		{
-			if (i == 91)
-			{ var11 = n1 / 1000000000;
-				var12 = n1 % 1000000000;
-				var21 = n2 / 1000000000;
-				var22 = n2 % 1000000000; }
-			else
-			{ var11 = var21;
-				var12 = var22;
-				var21 = sum1;
-				var22 = sum2; }
-			sum2 = (var12 + var22) % 1000000000;
-			c = (var12 + var22) / 1000000000;
-			sum1 = var11 + var21 + c;
-			if (!(i == 97))
-				printf("%ld%ld, ", sum1, sum2);
-			else
-				printf("%ld%ld", sum1, sum2); } }
+			half1 += 1;
+			half2 %= 10000000000;
+		}
+
+		printf("%lu%lu", half1, half2);
+		if (count != 98)
+			printf(", ");
+
+		fib1_half1 = fib2_half1;
+		fib1_half2 = fib2_half2;
+		fib2_half1 = half1;
+		fib2_half2 = half2;
+	}
 	printf("\n");
 	return (0);
 }
