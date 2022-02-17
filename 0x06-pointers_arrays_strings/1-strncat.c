@@ -1,28 +1,28 @@
 #include "main.h"
-/*
-*_strncat function that takes three arguments
-* dest of type char
-*src of type char
-*n of type int
-*
-*return dest
-*/
 
-char *_strncat(char *dest, char *src,int n)
+/**
+ * _strncat - concatenates two strings,
+ * @dest: destination.
+ * @src: source.
+ * @n: amount of bytes used from src.
+ * Return: the pointer to dest.
+ */
+char *_strncat(char *dest, char *src, int n)
 {
+	int count = 0, count2 = 0;
 
-	int i=0; length= 0;
-
-	while(dest[i++])
+	while (*(dest + count) != '\0')
 	{
-		length++;
-	
-
-		for(i=0; i< n && src[i] != '\0'; i++,length++)
-		{
-			dest[length] =src[i];
-		}
+		count++;
 	}
 
-	return(dest);
+	while (count2 < n)
+	{
+		*(dest + count) = *(src + count2);
+		if (*(src + count2) == '\0')
+			break;
+		count++;
+		count2++;
+	}
+	return (dest);
 }
