@@ -1,15 +1,19 @@
-#include "holberton.h"
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - A program that prints the number of arguements you passed into it
- * @argc: An argument counter
- * @argv: An argument values
- * Return: Always 0 (Success)
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	if (argv[0])
-		printf("%d\n", argc - 1);
+	int i = 0;
+
+	while (i < argc)
+	{
+		printf("%s\n", argv[i]);
+		i++;
+	}
 	return (0);
 }

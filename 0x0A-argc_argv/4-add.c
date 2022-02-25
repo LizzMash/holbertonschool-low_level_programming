@@ -1,30 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
+#include "main.h"
 /**
- * main - A program that adds positive numbers
- * @argc: The arguments' counter
- * @argv: The argument's values
- * Return: Always 0 (Success)
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int num, result = 0, i;
+	int i, sum = 0;
 
-	while (argc-- > 1)
+	if (argc < 1)
+		return (0);
+
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 0; argv[argc][i]; i++)
+		if (!atoi(argv[i]))
 		{
-			if (!(isdigit(argv[argc][i])))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			printf("%s\n", "Error");
+			return (1);
 		}
-		num = atoi(argv[argc]);
-		result += num;
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", result);
+	printf("%d\n", sum);
+
 	return (0);
 }
