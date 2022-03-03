@@ -1,8 +1,3 @@
-/*
- * File: 0-malloc_checked.c
- * Auth: Elizabeth Mashilo
- */
-
 #include "main.h"
 #include <stdlib.h>
 

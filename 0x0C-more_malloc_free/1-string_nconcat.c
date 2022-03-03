@@ -1,8 +1,3 @@
-/*
- * File: 1-string_nconcat.c
- * Auth: Elizabeth Mashilo
- */
-
 #include "main.h"
 #include <stdlib.h>
 
