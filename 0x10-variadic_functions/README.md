@@ -41,4 +41,4 @@ Any other character is ignored.
 A new line is printed at the end of the function.
 4. Real programmers can write assembly code in any language
 
-100-hello_holberton.asm: 64-bit assembly program that prints Hello, Holberton, followed by a new line using only the system call write with int.
+100-hello_world.asm: 64-bit assembly program that prints Hello, World, followed by a new line using only the system call write with int.
